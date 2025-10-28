@@ -1,4 +1,14 @@
 {
   "name": "playground2",
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.4.1",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach --all -pt run dev",
+    "build": "yarn workspaces foreach --all -pt run build"
+  },
+  "dependencies": {
+    "@module-federation/vite": "^1.8.1"
+  }
 }
